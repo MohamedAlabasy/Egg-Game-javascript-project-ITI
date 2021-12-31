@@ -13,25 +13,9 @@ class Egg extends Shapes {
             this.#horizontalPosition = _horizontalPosition;
             this.createEgg();   // to  call this fun in while creating object
             this.startFall();
-            // window.document.querySelector("audio").setAttribute("src","assets/sounds/effects/click1.wav");
+            window.document.getElementsByTagName("audio")[1].setAttribute("src","assets/sounds/rollover4.wav");
         }
     }
-    //getter for vertical direction 
-    //   get VerticalPosition() {
-    //     return this.#verticalPosition;
-    // }
-    // getter & Setter for horizontal direction 
-    // get HorizontalPosition() {
-    //     return this.#horizontalPosition;
-    // }
-    // set HorizontalPosition(_horizontalPositionValue) {
-    //     if (_horizontalPositionValue == "" || _horizontalPositionValue == undefined || _horizontalPositionValue == null || _horizontalPositionValue <= 0 || typeof _horizontalPositionValue == 'string') {
-    //         throw new Error(`You must Enter egg position in number only`);
-    //     } else {
-    //         this.#horizontalPosition = _horizontalPositionValue;
-    //     }
-    // }
-
     createEgg() {
         //CSS Style for Egg Shape 
         let cssEggStyle = {
@@ -56,24 +40,16 @@ class Egg extends Shapes {
             this.#eggObject.style.top = `${this.#verticalPosition += basket.SpeedOfFallEggs}px`;
             if ((this.#verticalPosition + super.Height) >= window.innerHeight) {
                 this.#eggObject.setAttribute("src", "/assets/images/objects/object_012_broken_egg.png");
-                // window.document.querySelector("audio").setAttribute("src","assets/sounds/effects/click1.wav");
+                window.document.getElementsByTagName("audio")[1].setAttribute("src","assets/sounds/click1.wav");
                 this.stopFall();
                 this.removeEggObject(2000)
                 numberOfLostEgg.innerText= ++basket.NumberOfLossEggs;
-
             }
             if (this.#horizontalPosition >= basket.HorizontalPosition && (this.#horizontalPosition + super.Width) <= (basket.HorizontalPosition + basket.Width)
                 && (this.#verticalPosition + super.Height) >= (window.innerHeight - basket.Height / 2)) {
                 this.stopFall();
                 this.removeEggObject(0);
                 numberOfCollectEggs.innerText= ++basket.NumberOfCollectEggs;
-
-                if (basket.NumberOfCollectEggs == (basket.SpeedOfFallEggs * 10)) {
-                    basket.SpeedOfFallEggs++;
-                }
-                if (basket.NumberOfLossEggs > (basket.NumberOfCollectEggs + 20)) {
-                    // alert("Loss");
-                }
             }
         }, 10);
     }

@@ -10,20 +10,17 @@ body {
     src: url(/assets/fonts/GameOver.otf);
   }
 @font-face {
-    font-family: GamePlay;
-    src: url(/assets/fonts/GamePlay.ttf);
-  }
-@font-face {
-    font-family: angrybirds-regular;
+    font-family: angrybirds;
     src: url(/assets/fonts/angrybirds-regular.ttf);
   }
+
 
 #welcomeScreen{
     width: 100%;
     height: 100%;
-    background-size: cover;
     background-color: white;
     display: block;
+    background-size: cover;
     position: absolute;
 
 }
@@ -38,45 +35,61 @@ body {
 }
 
 .userDataText{
-    font-size: 30px;
+    font-size: 45px;
     color: green;
-
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'angrybirds';
 }
 .userData{
-    font-size: 30px;
+    font-size: 45px;
     color: firebrick;
     font-family:'GameOver';
 }
 #nameText{
-    font-family:'GameOver';
-    margin-left: 0px;
+    margin-left: 1%;
 }
 #scoreText{
-    font-family:'GamePlay';
-
-    margin-left: 50px;
+    margin-left: 12%;
 }
 #lostEggText{
-    font-family:'angrybirds-regular';
-
-    margin-left: 150px;
+    margin-left: 12%;
 }
 #timeText{
-    margin-left: 200px;
-    
+    margin-left: 12%;
 }
 
 div{
-    padding: auto;
-    margin: auto;
-    width: 300px;
-    height: 300px;
-
+    width: 80%;
+    height: 80%;
+    margin: 0px;
+    padding: 0px;
+    left: 24%;
+    top: 10%;
+    position: fixed;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("assets/images/backgrounds/back_103_menu.png");
 }
 #Restart{
-    width: 150px;
-    height: 150px;
+    width: 30%;
+    height: 13%;
+    font-family:'GameOver';
+    bottom: 17%;
+    font-size: 250%;
+    left: 33.5%;
+    color: ivory;
+    text-align: center;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size:  contain;    
+    background-image: url("assets/images/buttons/backgound_002.png");
+    border: 0px;
+    position: fixed;
+
+}
+.finishGame{
+    margin-left: 10.5%;
     position: absolute;
 }
 

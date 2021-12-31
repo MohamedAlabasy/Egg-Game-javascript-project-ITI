@@ -22,30 +22,13 @@ class Basket extends Shapes {
     get HorizontalPosition() {
         return this.#horizontalPosition;
     }
-    // set HorizontalPosition(_horizontalPositionValue) {
-    //     if (_horizontalPositionValue == "" || _horizontalPositionValue == undefined || _horizontalPositionValue == null || _horizontalPositionValue <= 0 || typeof _horizontalPositionValue == 'string') {
-    //         throw new Error(`You must Enter Basket position in number only`);
-    //     } else {
-    //         this.#horizontalPosition = _horizontalPositionValue;
-    //     }
-    // }
-
-
     // getter & Setter for vertical direction 
     get VerticalPosition() {
         return this.#verticalPosition;
     }
-  
-    // set VerticalPosition(_verticalPositionValue) {
-    //     if (_verticalPositionValue == "" || _verticalPositionValue == undefined || _verticalPositionValue == null || _verticalPositionValue <= 0 || typeof _verticalPositionValue == 'string') {
-    //         throw new Error(`You must Enter Basket position in number only`);
-    //     } else {
-    //         this.#verticalPosition = _verticalPositionValue;
-    //     }
-    // }
 
 
-
+    
     // getter & Setter for number Of Eggs Collected 
     get NumberOfCollectEggs() {
         return this.#numberOfCollectEggs;
@@ -57,7 +40,6 @@ class Basket extends Shapes {
             this.#numberOfCollectEggs = _numberOfCollectEggs;
         }
     }
-
 
 
     get NumberOfLossEggs() {
