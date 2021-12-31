@@ -13,6 +13,7 @@ class Egg extends Shapes {
             this.#horizontalPosition = _horizontalPosition;
             this.createEgg();   // to  call this fun in while creating object
             this.startFall();
+            // window.document.querySelector("audio").setAttribute("src","assets/sounds/effects/click1.wav");
         }
     }
     //getter for vertical direction 
@@ -46,31 +47,33 @@ class Egg extends Shapes {
         for (let i in cssEggStyle) {
             this.#eggObject.style[i] = cssEggStyle[i];
         }
-        window.document.body.querySelector("div[id=gameScreen]").append(this.#eggObject);
+        window.document.body.append(this.#eggObject);
     }
     startFall() {
+     let numberOfLostEgg =document.querySelector("label[id=userLostEgg]");
+     let numberOfCollectEggs =document.querySelector("label[id=userScore]");
         this.#timeID = setInterval(() => {
             this.#eggObject.style.top = `${this.#verticalPosition += basket.SpeedOfFallEggs}px`;
             if ((this.#verticalPosition + super.Height) >= window.innerHeight) {
-                this.#eggObject.setAttribute("src", "object_012_broken_egg.png");
+                this.#eggObject.setAttribute("src", "/assets/images/objects/object_012_broken_egg.png");
+                // window.document.querySelector("audio").setAttribute("src","assets/sounds/effects/click1.wav");
                 this.stopFall();
                 this.removeEggObject(2000)
-                basket.NumberOfLossEggs++;
+                numberOfLostEgg.innerText= ++basket.NumberOfLossEggs;
+
             }
             if (this.#horizontalPosition >= basket.HorizontalPosition && (this.#horizontalPosition + super.Width) <= (basket.HorizontalPosition + basket.Width)
                 && (this.#verticalPosition + super.Height) >= (window.innerHeight - basket.Height / 2)) {
                 this.stopFall();
                 this.removeEggObject(0);
-                basket.NumberOfCollectEggs++
+                numberOfCollectEggs.innerText= ++basket.NumberOfCollectEggs;
+
                 if (basket.NumberOfCollectEggs == (basket.SpeedOfFallEggs * 10)) {
                     basket.SpeedOfFallEggs++;
                 }
-                if (basket.NumberOfLossEggs > (basket.NumberOfCollectEggs+ 20)) {
-                    console.log("Loss");
+                if (basket.NumberOfLossEggs > (basket.NumberOfCollectEggs + 20)) {
+                    // alert("Loss");
                 }
-                console.log("Number Of Collect Eggs", basket.NumberOfCollectEggs);
-                console.log("Number Of loss Eggs", basket.NumberOfLossEggs);
-
             }
         }, 10);
     }

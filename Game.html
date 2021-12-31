@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Java Script Project</title>
+    <link href="Style.css" rel="stylesheet" />
+
+</head>
+
+<body id="gameScreen">
+    <label id="nameText" class="userDataText">Name : </label>
+    <label id="userName" class="userData">Mohamed</label>
+
+    <label id="scoreText" class="userDataText">Score : </label>
+    <label id="userScore" class="userData">0</label>
+
+    <label id="lostEggText" class="userDataText">Lost : </label>
+    <label id="userLostEgg" class="userData">0</label>
+
+    <label id="timeText" class="userDataText">Time : </label>
+    <label id="userTime" class="userData">00:00</label>
+
+
+
+    <div>
+        <script id="winnerWin" ></script>
+        <lottie-player src="https://assets10.lottiefiles.com/temp/lf20_2BmOqX.json"  background="transparent"  speed="0.8"  style="width: 300px; height: 300px;"    autoplay></lottie-player>
+  
+
+        <button id="Restart">Restart</button>
+    </div>
+    
+    
+      <audio autoplay>
+        <source  type="audio/mpeg">
+      </audio> 
+
+
+    <script src="ClassShapes.js"></script>
+    <script src="ClassBasket.js"></script>
+    <script src="ClassEgg.js"></script>
+    <script src="Game.js"></script>
+</body>
+
+</html>

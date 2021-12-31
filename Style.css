@@ -4,6 +4,20 @@ body {
     height: 100%;
     margin: 0;
 }
+
+@font-face {
+    font-family: GameOver;
+    src: url(/assets/fonts/GameOver.otf);
+  }
+@font-face {
+    font-family: GamePlay;
+    src: url(/assets/fonts/GamePlay.ttf);
+  }
+@font-face {
+    font-family: angrybirds-regular;
+    src: url(/assets/fonts/angrybirds-regular.ttf);
+  }
+
 #welcomeScreen{
     width: 100%;
     height: 100%;
@@ -15,21 +29,54 @@ body {
 }
 
 #gameScreen{
+    background-image: url("/assets/images/backgrounds/back_002_game.jpg");
+}
+
+#startGamesBTN{
     width: 100%;
     height: 100%;
+}
+
+.userDataText{
+    font-size: 30px;
+    color: green;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.userData{
+    font-size: 30px;
+    color: firebrick;
+    font-family:'GameOver';
+}
+#nameText{
+    font-family:'GameOver';
+    margin-left: 0px;
+}
+#scoreText{
+    font-family:'GamePlay';
+
+    margin-left: 50px;
+}
+#lostEggText{
+    font-family:'angrybirds-regular';
+
+    margin-left: 150px;
+}
+#timeText{
+    margin-left: 200px;
+    
+}
+
+div{
+    padding: auto;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+
+}
+#Restart{
+    width: 150px;
+    height: 150px;
     position: absolute;
-    display: none;
-    background-image: url("back_002_game.jpg");
 }
-#startGames{
-    width: 100%;
-    height: 100%;
-}
-#pause{
-    width: 150px;
-    height: 150px;
-}
-#resume{
-    width: 150px;
-    height: 150px;
-}
+

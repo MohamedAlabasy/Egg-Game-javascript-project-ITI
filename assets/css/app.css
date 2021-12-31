@@ -1,0 +1,36 @@
+@font-face {
+  font-family: angryBirds;
+  src: url(../fonts/angrybirds-regular.ttf);
+}
+
+@font-face {
+  font-family: gameOver;
+  src: url(../fonts/GameOver.otf);
+}
+
+@font-face {
+  font-family: gamePlay;
+  src: url(../fonts/Gameplay.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+}

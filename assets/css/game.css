@@ -1,0 +1,197 @@
+input {
+  font-family: gameOver;
+}
+
+button {
+  font-family: gamePlay;
+}
+
+div.game-main-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 600px;
+  min-height: 400px;
+}
+/* ----- * [Start] * ----- General ----- * [Start] * ----- */
+
+p.game-title {
+  color: rgba(247, 247, 247, 0.952);
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-family: angryBirds;
+}
+
+p.game-title-big {
+  color: rgba(100, 54, 54, 0.952);
+  padding: 0;
+  margin: 0;
+  font-size: 3.3rem;
+  font-family: angryBirds;
+}
+
+p.user-name {
+  color: rgba(158, 41, 41, 0.952);
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-family: gameOver;
+}
+
+/* ----- * [End] * ----- General ----- * [End] * ----- */
+
+/* ----- * [Start] * ----- Welcome Screen ----- * [Start] * ----- */
+
+div#welcomePanel {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  background-image: url(../images/backgrounds/back_001_eggs.jpg);
+  background-repeat: repeat;
+}
+
+div#welcomePanel > div {
+  width: 300px;
+  height: 350px;
+  margin: auto;
+  border-radius: 50% 50% 45% 45%;
+  background-color: rgba(136, 136, 136, 0.752);
+  text-shadow: 0 0 10px rgba(116, 34, 34, 0.814);
+  padding: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div.name-input {
+  margin: auto;
+  padding: 20px 25px;
+  width: 250px;
+  height: 80px;
+  background-image: url(../images/buttons/backgound_002.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -8px;
+}
+
+div.name-input > input {
+  width: 180px;
+  font-size: 2rem;
+  color: aliceblue;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+button.game-btn {
+  width: 100px;
+  height: 50px;
+  margin-top: 8px;
+  color: aliceblue;
+  background-image: url(../images/buttons/backgound_003.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button.game-btn:hover {
+  color: burlywood;
+}
+
+/* ----- * [End] * ----- Welcome Screen ----- * [End] * ----- */
+
+/* ----- * [Start] * ----- Main Menu Screen ----- * [Start] * ----- */
+
+div#mainMenu {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/backgrounds/back_003_game.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+img.wooden-button-l {
+  width: 6%;
+  height: auto;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+img.wooden-button-r {
+  width: 6%;
+  height: auto;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 20px;
+  float: right;
+}
+
+div.top-container {
+  position: relative;
+  height: 80px;
+}
+
+div.middle-container {
+  width: 500px;
+  height: 350px;
+  margin: auto;
+  background-image: url(../images/backgrounds/back_101_menu.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ----- * [End] * ----- Main Menu Screen ----- * [End] * ----- */
+
+/* ----- * [Start] * ----- Game Screen ----- * [Start] * ----- */
+
+#gameScreen {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/backgrounds/back_002_game.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* ----- * [End] * ----- Game Screen ----- * [End] * ----- */
+
+/* ----- * ----- [Start] Animated Text [Start] ----- * -----  */
+span.animated-text {
+  font: 700 2.3em/1 angryBirds, sans-serif;
+  letter-spacing: 10px;
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 20px rgba(116, 34, 34, 0.5);
+  /* Clip Background Image */
+  background: url(../images/animated-text-fill.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+  animation: aitf 80s linear infinite;
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* ----- * ----- [End] Animated Text [End] ----- * -----  */
