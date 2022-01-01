@@ -8,9 +8,13 @@ You will find the project on : [https://arshadasgar.github.io/flattybird/](Githu
 
 
 Description of the game :
-1-There is a class for Basket, and there is another class for eggs (Class.JS)
+1-There is a class for Basket (ClassBasket.JS), and there is another class for eggs (ClassEgg.JS)
 
-2-There is a JS file called "gameEntryPoint.js" for the starting point of the game in which the object is     created and from which the game begins.
+2-There is 2 page html with 2 page js with same name.
+        1-Index.html -> get user name and game level
+          Index.js   -> check name user and post data to server then move to Game page
+        2-Game.html  -> the game design
+          Game.js    -> for the starting point of the game in which the object is created and which the game begins.
 
 3-The movement of the basket is controlled with the mouse or the left and right arrow.
 
@@ -19,3 +23,5 @@ Description of the game :
 5-The player loses if the number of eggs that fell on the ground is more than the number of collected eggs by 20 eggs.
 
 6-The player wins if he collects 100 eggs
+
+7-there is a lottie Animation that appeared at the end of the game when user win or loss

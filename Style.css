@@ -32,7 +32,7 @@ body {
     text-align: center;
     position: fixed;
 }
-#userName{
+#getUserName{
     background-image: url("assets/images/buttons/backgound_001.png");
     border: 0px;
     width: 300px;
@@ -61,6 +61,7 @@ body {
     color: red;
     text-align: center;
     position: fixed;
+    visibility: hidden;
 }
 
 #radioTable{

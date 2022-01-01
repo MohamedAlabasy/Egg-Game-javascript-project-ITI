@@ -40,7 +40,8 @@ class Egg extends Shapes {
             this.#eggObject.style.top = `${this.#verticalPosition += basket.SpeedOfFallEggs}px`;
             if ((this.#verticalPosition + super.Height) >= window.innerHeight) {
                 this.#eggObject.setAttribute("src", "/assets/images/objects/object_012_broken_egg.png");
-                window.document.getElementsByTagName("audio")[1].setAttribute("src","assets/sounds/click1.wav");
+                this.#eggObject.style.width="120px";
+                window.document.querySelector("audio[id=eggAudio]").setAttribute("src","assets/sounds/click1.wav");
                 this.stopFall();
                 this.removeEggObject(2000)
                 numberOfLostEgg.innerText= ++basket.NumberOfLossEggs;
@@ -51,6 +52,12 @@ class Egg extends Shapes {
                 this.removeEggObject(0);
                 numberOfCollectEggs.innerText= ++basket.NumberOfCollectEggs;
             }
+
+            if ((basket.NumberOfLossEggs > (basket.NumberOfCollectEggs + 20)) ||basket.NumberOfCollectEggs >= 100 ) {
+                window.document.querySelector("audio[id=eggAudio]").setAttribute("src","");
+                this.removeEggObject(0);
+            }
+
         }, 10);
     }
     //for make shape stop by clear Interval 

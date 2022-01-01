@@ -6,13 +6,13 @@ let restartContainer = window.document.querySelector("div");
 let restartBtn = window.document.querySelector("button[id=Restart]");
 
 let finishGameScript = window.document.querySelector("script[id=finishGame]");
-let finishGameSound = window.document.getElementsByTagName("audio")[0];
+let finishGameSound = window.document.querySelector("audio[id=finishGameAudio]");
 let finishGame = window.document.querySelector("lottie-player");
 
 
 
 //Create Basket object
-let basket = new Basket("/assets/images/objects/object_001_basket.png", (window.innerWidth / 2), 150, 150, 1);
+let basket = new Basket("/assets/images/objects/image_102_ob.png", (window.innerWidth / 2), 150, 160, 1);
 // Create Egg object
 let randomPosition = Math.random();
 let createObjectEgg = setInterval(() => {
@@ -39,7 +39,6 @@ let timer = setInterval(() => {
     }
 
     if (basket.NumberOfCollectEggs >= 5) {
-        window.document.getElementsByTagName("audio")[1].remove();
         finishGameSound.setAttribute("src", "assets/sounds/Victory.mp3");
         finishGameScript.setAttribute("src", "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js");
         finishGame.setAttribute("src", "https://assets10.lottiefiles.com/temp/lf20_2BmOqX.json");
@@ -49,7 +48,6 @@ let timer = setInterval(() => {
         window.document.querySelector("img[id=basket]").remove();
     }
     if (basket.NumberOfLossEggs > (basket.NumberOfCollectEggs + 5)) {
-        window.document.getElementsByTagName("audio")[1].remove();
         finishGameSound.setAttribute("src", "assets/sounds/gameOver.mp3");
         finishGameScript.setAttribute("src", "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js");
         finishGame.setAttribute("src", "https://assets6.lottiefiles.com/packages/lf20_OyFTHm.json");
