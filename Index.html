@@ -1,40 +1,39 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Index</title>
-        <link href="Style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div id="welcomeScreen">
 
-            <form>
-                <table>
-                    <tr>
-                        <td>
-                            <p>Enter Your Name</p>
-                        </td>
-                        <td colspan="3"> <input name="userName" type="text" /></td>
-                    </tr>
-                    <tr>
-                        <td><p id="Game Level">Game level</p></td>
-                        <td><input type="radio" name="gameLevel" value="easy" checked>Easy</input></td>
-                        <td><input type="radio" name="gameLevel" value="normal">Normal</input></td>
-                        <td><input type="radio" name="gameLevel" value="hard">Hard</input></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <input id="startGamesBTN" type="button" value="Start Games" />
-                            <a href="two/gallery.html">Visit Gallery</a>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
+<head>
+    <title>Index</title>
+    <link href="Style.css" rel="stylesheet" />
+</head>
 
+<body id="welcomeScreen">
+    <div>
+        <label id="title">EGG collecting</label>
+        <form method="get" action="https://www.google.com/">
 
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_OyFTHm.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+            <input id="userName" name="userName" type="text" value="Enter Your Name" />
+            <span id="error">!</span>
+            <table id="radioTable">
+                <tr>
+                    <td>
+                        <input class="radioLevel" type="radio" name="gameLevel" value="1"checked>Easy</input>
+                    </td>
+                    <td>
+                        <input class="radioLevel" type="radio" name="gameLevel" value="3">Normal</input>
+                    </td>
+                    <td>
+                        <input class="radioLevel" type="radio" name="gameLevel" value="6">Hard</input>
+                    </td>
+                </tr>
+            </table>
 
-        <script src="checkName.js"></script>
-    </body>
-</html> 
+            <td colspan="4">
+                <input id="Restart" type="submit" value="Start Game" />
+
+        </form>
+    </div>
+
+    <script src="Index.js"></script>
+</body>
+
+</html>
