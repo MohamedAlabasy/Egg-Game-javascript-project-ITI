@@ -39,13 +39,10 @@ function getGameLevel() {
 
 startGame.addEventListener("click", function (event) {
     if (checkName(userNameValue)) {
-        window.location.href = "Game.html";
-        // export let  Data={
-        //         playerName:userNameValue,
-        //         playedSpeed:speedOfGame,
-        // }
+     getData(userNameValue);
     } else {
         userNameSpan.style.visibility = "visible";
+       
     }
 })
 
@@ -56,16 +53,18 @@ function checkName(_name) {
     return false;
 }
 
-let getData = async function () {
-    let comments = await fetch(`https://node-monge-iti-project.herokuapp.com/games/${userNameValue}`)
-    let data = await comments.json()
-    console.log(data);
-    return data;
-}
-
-let setData = async function () {
-    let comments = await fetch(`https://node-monge-iti-project.herokuapp.com/games/`, { method: 'POST', body: { name: userNameValue } })// ajax
-    let data = await comments.json()
-    console.log(data);
+let getData = async function (_userNameValue) {
+    let comments = await fetch(
+        `https://node-monge-iti-project.herokuapp.com/games/${_userNameValue}`,
+        {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }
+    ) 
+    let data = await comments.json();
+    localStorage.setItem("userDate", data["date"]); 
+    document.forms["myForm"].submit();
     return data;
 }

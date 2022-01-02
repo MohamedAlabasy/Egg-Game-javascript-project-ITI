@@ -18,7 +18,10 @@ body {
 #welcomeScreen{
     margin: 0px;
     padding: 0px;
-    background-image: url("/assets/images/backgrounds/back_002_game.jpg");
+    background-image: url("/assets/images/backgrounds/back_blur.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
 }
 
 #title{
@@ -116,7 +119,10 @@ input[type='radio']:checked:after {
 }
 
 #gameScreen{
-    background-image: url("/assets/images/backgrounds/back_002_game.jpg");
+    background-image: url("/assets/images/backgrounds/back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .userDataText{
     font-size: 45px;
@@ -132,13 +138,25 @@ input[type='radio']:checked:after {
     margin-left: 1%;
 }
 #scoreText{
-    margin-left: 12%;
+    margin-left: 8%;
 }
 #lostEggText{
-    margin-left: 12%;
+    margin-left: 8%;
 }
 #timeText{
-    margin-left: 12%;
+    margin-left: 8%;
+}
+#DateText{
+    margin-left: 1%;
+}
+.date{
+    bottom: 1%;
+    position: fixed;
+}
+#userDate{
+    margin-left: 16%;
+    bottom: 1%;
+    position: fixed;
 }
 
 div{
@@ -153,6 +171,7 @@ div{
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("assets/images/backgrounds/back_103_menu.png");
+    
 }
 
 #Restart{
