@@ -13,7 +13,7 @@ class Egg extends Shapes {
             this.#horizontalPosition = _horizontalPosition;
             this.createEgg();   // to  call this fun in while creating object
             this.startFall();
-            window.document.getElementsByTagName("audio")[1].setAttribute("src","assets/sounds/rollover4.wav");
+            window.document.getElementsByTagName("audio")[1].setAttribute("src", "assets/sounds/rollover4.wav");
         }
     }
     createEgg() {
@@ -34,31 +34,31 @@ class Egg extends Shapes {
         window.document.body.append(this.#eggObject);
     }
     startFall() {
-     let numberOfLostEgg =document.querySelector("label[id=userLostEgg]");
-     let numberOfCollectEggs =document.querySelector("label[id=userScore]");
+        let numberOfLostEgg = document.querySelector("label[id=userLostEgg]");
+        let numberOfCollectEggs = document.querySelector("label[id=userScore]");
         this.#timeID = setInterval(() => {
             this.#eggObject.style.top = `${this.#verticalPosition += basket.SpeedOfFallEggs}px`;
             if ((this.#verticalPosition + super.Height) >= window.innerHeight) {
                 this.#eggObject.setAttribute("src", "/assets/images/objects/object_012_broken_egg.png");
-                this.#eggObject.style.width="120px";
-                window.document.querySelector("audio[id=eggAudio]").setAttribute("src","assets/sounds/click1.wav");
+                this.#eggObject.style.width = "120px";
+                window.document.querySelector("audio[id=eggAudio]").setAttribute("src", "assets/sounds/click1.wav");
                 this.stopFall();
                 this.removeEggObject(2000)
-                numberOfLostEgg.innerText= ++basket.NumberOfLossEggs;
+                numberOfLostEgg.innerText = ++basket.NumberOfLossEggs;
             }
             if (this.#horizontalPosition >= basket.HorizontalPosition && (this.#horizontalPosition + super.Width) <= (basket.HorizontalPosition + basket.Width)
                 && (this.#verticalPosition + super.Height) >= (window.innerHeight - basket.Height / 2)) {
                 this.stopFall();
                 this.removeEggObject(0);
-                numberOfCollectEggs.innerText= ++basket.NumberOfCollectEggs;
+                numberOfCollectEggs.innerText = ++basket.NumberOfCollectEggs;
             }
 
-            if ((basket.NumberOfLossEggs > (basket.NumberOfCollectEggs + 20)) ||basket.NumberOfCollectEggs >= 100 ) {
-                window.document.querySelector("audio[id=eggAudio]").setAttribute("src","");
+            if ((basket.NumberOfLossEggs > (basket.NumberOfCollectEggs + 20)) || basket.NumberOfCollectEggs >= 100) {
+                window.document.querySelector("audio[id=eggAudio]").setAttribute("src", "");
                 this.removeEggObject(0);
             }
 
-        }, 10);
+        }, 10); //close of start Fall function
     }
     //for make shape stop by clear Interval 
     stopFall() {

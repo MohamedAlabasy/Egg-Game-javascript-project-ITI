@@ -5,7 +5,7 @@ class Basket extends Shapes {
     #numberOfCollectEggs = 0;
     #numberOfLossEggs = 0;
     #speedOfFallEggs = 1;
-    constructor(_basketImg, _horizontalPosition, _height, _width=_height, _speedOfGame) {
+    constructor(_basketImg, _horizontalPosition, _height, _width = _height, _speedOfGame) {
         super(_basketImg, _height, _width);
         if (_horizontalPosition == "" || _horizontalPosition == undefined || _horizontalPosition == null || _horizontalPosition <= 0 || typeof _horizontalPosition == 'string') {
             throw new Error(`You must Enter ball Location in positive number only`);
@@ -27,8 +27,6 @@ class Basket extends Shapes {
         return this.#verticalPosition;
     }
 
-
-    
     // getter & Setter for number Of Eggs Collected 
     get NumberOfCollectEggs() {
         return this.#numberOfCollectEggs;
@@ -40,8 +38,7 @@ class Basket extends Shapes {
             this.#numberOfCollectEggs = _numberOfCollectEggs;
         }
     }
-
-
+    // getter & Setter for number Of Eggs lose 
     get NumberOfLossEggs() {
         return this.#numberOfLossEggs;
     }
@@ -64,6 +61,7 @@ class Basket extends Shapes {
             this.#speedOfFallEggs = _speedOfFallEggs;
         }
     }
+
     createBasket() {
         //CSS Style for Basket Shape 
         let cssBasketStyle = {
@@ -73,6 +71,7 @@ class Basket extends Shapes {
             "top": `${this.#verticalPosition}px`,
             "left": `${this.#horizontalPosition}px`,
         }
+
         //shape inside the main ball which is rectangle
         this.#basketObject = document.createElement("img");
         this.#basketObject.setAttribute("id", "basket")
@@ -104,6 +103,7 @@ class Basket extends Shapes {
             }
         });
     }
+
     moveBasketByMouse() {
         window.document.addEventListener("mousemove", (event) => {
             this.#basketObject.style.top = `${this.#verticalPosition = window.innerHeight - super.Height}px`;
