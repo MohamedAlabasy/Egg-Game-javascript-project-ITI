@@ -1,17 +1,13 @@
 # JS_Final_Project_EggGame
-The game was made by => [Mohamed Al-Saeed Al-Abasy]
-Please feel free to feedback me at :
-        (+20)1013066560 [https://api.whatsapp.com/send?phone=201013066560](Click to contact me on WhatsApp) 
-                                [eng.mohamed.alabasy@gmail.com]
-
-
-You will find the project on : [https://arshadasgar.github.io/flattybird/](Github link)  
-
 
 Description of the game :
 1-There is a class for Basket (ClassBasket.JS), and there is another class for eggs (ClassEgg.JS)
+<img src="https://user-images.githubusercontent.com/93389016/149851837-2274fe07-54f1-4605-ad9b-161c7c294d35.png" width="40%" height="40%" >
+<img src="https://user-images.githubusercontent.com/93389016/149851884-521d033d-b386-457b-9ec3-f5a61615a377.png" width="40%" height="40%" >
 
-2-There is 2 page html with 2 page js with same name.
+
+2-There is 2 page 
+html with 2 page js with same name.
         1-Index.html -> get user name and game level
           Index.js   -> check name user and post data to server then move to Game page
         2-Game.html  -> the game design
