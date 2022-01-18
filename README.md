@@ -10,10 +10,10 @@ Description of the game :
 
 2-There is 2 page 
 html with 2 page js with same name.  
-.        1-Index.html -> get user name and game level  
-.          Index.js   -> check name user and post data to server then move to Game page  
-.        2-Game.html  -> the game design  
-.          Game.js    -> for the starting point of the game in which the object is created and which the game begins.  
+          1-Index.html -> get user name and game level  
+                Index.js   -> check name user and post data to server then move to Game page  
+          2-Game.html  -> the game design  
+                 Game.js    -> for the starting point of the game in which the object is created and which the game begins.  
 
 3-The movement of the basket is controlled with the mouse or the left and right arrow.  
 
