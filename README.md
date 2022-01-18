@@ -7,14 +7,14 @@
 
 Description of the game :  
 1-There is a class for Basket (ClassBasket.JS), and there is another class for eggs (ClassEgg.JS)
-
+<pre>
 2-There is 2 page 
 html with 2 page js with same name.  
           1-Index.html -> get user name and game level  
                 Index.js   -> check name user and post data to server then move to Game page  
           2-Game.html  -> the game design  
                  Game.js    -> for the starting point of the game in which the object is created and which the game begins.  
-
+</pre>
 3-The movement of the basket is controlled with the mouse or the left and right arrow.  
 
 4-The game starts with a slow acceleration of eggs falling, as well as the speed of moving the basket, then the speed gradually increases with each time you collect ten more eggs, and the speed of moving the Basket also increases to match the speed of the eggs falling.  
