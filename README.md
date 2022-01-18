@@ -1,5 +1,6 @@
 # JS_Final_Project_EggGame
 ![login_page](https://user-images.githubusercontent.com/93389016/149851967-2fe64b27-a0fe-4fb5-a510-a42c77d6699b.png)
+![game_page](https://user-images.githubusercontent.com/93389016/149852011-dc4b34e1-f5f2-4bbf-b927-d5e729cb25d7.png)
 
 <!-- <img src="https://user-images.githubusercontent.com/93389016/149851837-2274fe07-54f1-4605-ad9b-161c7c294d35.png" width="40%" height="40%" > -->
 <!-- <img src="https://user-images.githubusercontent.com/93389016/149851884-521d033d-b386-457b-9ec3-f5a61615a377.png" width="40%" height="40%" > -->
