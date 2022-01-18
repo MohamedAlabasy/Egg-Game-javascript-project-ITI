@@ -5,7 +5,7 @@
 <!-- <img src="https://user-images.githubusercontent.com/93389016/149851837-2274fe07-54f1-4605-ad9b-161c7c294d35.png" width="40%" height="40%" > -->
 <!-- <img src="https://user-images.githubusercontent.com/93389016/149851884-521d033d-b386-457b-9ec3-f5a61615a377.png" width="40%" height="40%" > -->
 
-Description of the game :;
+Description of the game :  
 1-There is a class for Basket (ClassBasket.JS), and there is another class for eggs (ClassEgg.JS)
 
 2-There is 2 page 
